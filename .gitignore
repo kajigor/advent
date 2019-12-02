@@ -1,0 +1,8 @@
+
+.stack-work/
+
+dist-newstyle/
+
+advent.cabal
+
+stack.yaml.lock
