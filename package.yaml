@@ -21,15 +21,20 @@ description:         Please see the README on GitHub at <https://github.com/kaji
 
 dependencies:
 - base >= 4.7 && < 5
+- ghc 
+- containers
 
 library:
   exposed-modules: 
       Adv01
     , Adv02
+    , Adv03
+    , Adv04
+    , Adv05
   other-modules: []  
   source-dirs: src
   dependencies: 
-      base >=4.7 && <5
+    - base >=4.7 && <5
 
 executables:
   advent-01:
@@ -41,8 +46,6 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - advent
-    - ghc
-    - base >=4.7 && <5
   advent-02:
     main:                Main.hs
     source-dirs:         app/02
@@ -52,8 +55,34 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - advent
-    - ghc
-    - base >=4.7 && <5
+  advent-03:
+    main:                Main.hs
+    source-dirs:         app/03
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - advent
+  advent-04:
+    main:                Main.hs
+    source-dirs:         app/04
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - advent
+  advent-05:
+    main:                Main.hs
+    source-dirs:         app/05
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - advent
+
 
 tests:
   advent-test:
@@ -65,7 +94,6 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - advent
-    - base >=4.7 && <5
     - hedgehog
     - HUnit
     - tasty
