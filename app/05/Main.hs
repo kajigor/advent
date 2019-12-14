@@ -1,7 +1,7 @@
 module Main where 
 
 import Adv05 (runProg)
-import Util
+import Util (split)
 
 input = "app/05/input"
 

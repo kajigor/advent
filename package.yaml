@@ -23,75 +23,63 @@ dependencies:
 - base >= 4.7 && < 5
 - ghc 
 - containers
+- split
+
+
+ghc-options:
+- -threaded
+- -rtsopts
+- -with-rtsopts=-N
 
 library:
-  exposed-modules: 
-      Adv01
-    , Adv02
-    , Adv03
-    , Adv04
-    , Adv05
-  other-modules: []  
   source-dirs: src
-  dependencies: 
-    - base >=4.7 && <5
 
 executables:
   advent-01:
     main:                Main.hs
     source-dirs:         app/01
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
     dependencies:
     - advent
   advent-02:
     main:                Main.hs
     source-dirs:         app/02
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
     dependencies:
     - advent
   advent-03:
     main:                Main.hs
     source-dirs:         app/03
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
     dependencies:
     - advent
   advent-04:
     main:                Main.hs
     source-dirs:         app/04
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
     dependencies:
     - advent
   advent-05:
     main:                Main.hs
     source-dirs:         app/05
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
     dependencies:
     - advent
-
+  advent-06:
+    main:                Main.hs
+    source-dirs:         app/06
+    dependencies:
+    - advent
+  advent-07:
+    main:                Main.hs
+    source-dirs:         app/07
+    dependencies:
+    - advent
+  advent-08:
+    main:                Main.hs
+    source-dirs:         app/08
+    dependencies:
+    - advent
 
 tests:
   advent-test:
     main:                Test.hs
     source-dirs:         test
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
     dependencies:
     - advent
     - hedgehog

@@ -1,5 +1,6 @@
 module Adv05 
   ( runProg 
+  , runProg'
   , parseInstr 
   , Mode (..)
   , Instr (..)
@@ -115,11 +116,12 @@ eval pc input memory output =
       isFalse :: Int -> Bool 
       isFalse = (== 0)
 
-
-
-runProg :: [String] -> Input -> Int 
-runProg str input =
+runProg' :: [String] -> Input -> [Int] 
+runProg' str input =
   let memory = map read str :: [Int] in 
   let pc = 0 in 
   let (output, _) = eval pc input memory [] in 
-  head output 
+  output 
+
+runProg :: [String] -> Input -> Int 
+runProg prg = head . runProg' prg
