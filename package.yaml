@@ -75,6 +75,16 @@ executables:
     source-dirs:         app/08
     dependencies:
     - advent
+  advent-09:
+    main:                Main.hs
+    source-dirs:         app/09
+    dependencies:
+    - advent
+  advent-16:
+    main:                Main.hs
+    source-dirs:         app/16
+    dependencies:
+    - advent
 
 tests:
   advent-test:
