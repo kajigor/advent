@@ -27,6 +27,7 @@ library
   exposed-modules:
       D01
       D02
+      D03
   other-modules:
       Paths_advent2021
   hs-source-dirs:
