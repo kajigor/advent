@@ -28,6 +28,7 @@ library
       D01
       D02
       D03
+      D04
   other-modules:
       Paths_advent2021
   hs-source-dirs:
