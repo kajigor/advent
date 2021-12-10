@@ -1,6 +1,6 @@
 module Main where
 
-import qualified D04
+import qualified D06
 import Data.List
 
 baseDir :: String
@@ -21,7 +21,7 @@ readString fileName =
 
 main :: IO ()
 main = do
-  input <- readString "04.txt"
-  print (D04.task1 input)
-  print (D04.task2 input)
+  input <- readString "06.txt"
+  print (D06.task1 input)
+  print (D06.task2 input)
 
